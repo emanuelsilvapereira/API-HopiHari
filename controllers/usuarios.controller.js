@@ -29,10 +29,21 @@ exports.atualizarUsuario = async (req, res) => {
 exports.cadastrarUsuario = async (req, res) => {
     try {
         const resultado = await mysql.execute(
-                `INSERT INTO users ( name, email, password)
-                 VALUES (?, ?, ?)`,
-                [req.body.name, req.body.email, req.body.password]
-            );
+        `INSERT INTO users (
+            first_name,
+            last_name,
+            email,
+            password,
+            birth_date,
+             phone)
+            values (?, ?, ?, ?, ?, ?);`,[
+                req.body.first_name, 
+                req.body.last_name,
+                req.body.email, 
+                req.body.password,
+                req.body.birth_date,
+                req.body.phone
+            ]);
 
         return res.status(200).send({
             "Mensagem": "Usuario Cadastrado com Sucesso",
