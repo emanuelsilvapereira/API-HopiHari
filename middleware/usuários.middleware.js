@@ -6,7 +6,7 @@ exports.required = async (req, res, next) => {
 
 
         const token = req.headers.authorization.split(" ")[1];
-        const decoded = jwt.verify(token, "senhajwt");
+        const decoded = jwt.verify(token, "senhadojwt");
 
         if (decoded) {
             res.locals.idUsuario = decoded.id;
