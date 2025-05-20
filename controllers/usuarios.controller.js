@@ -38,14 +38,16 @@ exports.cadastrarUsuario = async (req, res) => {
             email,
             password,
             birth_date,
-             phone)
-            values (?, ?, ?, ?, ?, ?);`,[
+             phone, 
+             admin)
+            values (?, ?, ?, ?, ?, ?, ?);`,[
                 req.body.first_name, 
                 req.body.last_name,
                 req.body.email, 
                 hash,
                 req.body.birth_date,
-                req.body.phone
+                req.body.phone,
+                false
             ]);
 
         return res.status(200).send({
@@ -79,6 +81,8 @@ exports.login = async (req, res) => {
             last_name: usuario [0].last_name,
             email: usuario[0].email,
             birth_date: usuario[0].birth_date,
+            phone: usuario[0].phone,
+            admin: usuario[0].admin
         }, "senhadojwt")
 
         return res.status(200).send({
