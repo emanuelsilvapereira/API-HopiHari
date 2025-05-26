@@ -25,3 +25,15 @@ FROM   `lines`
 INNER JOIN   users     ON users.id = `lines`.id_user
 INNER JOIN   rides     ON rides.id = `lines`.id_ride
 WHERE  rides.area = '1';
+
+use hopi_hari_db;
+
+INSERT INTO area (name)
+VALUES	('aribabiba'),
+		('kaminamundi'),
+		('infantasia'),
+		('mistieri'),
+        ('WildWest');
+
+
+        
