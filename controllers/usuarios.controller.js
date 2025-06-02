@@ -5,28 +5,33 @@ const jwt = require("jsonwebtoken");
 exports.atualizarUsuario = async (req, res) => {
     try {
         const idUsuario = Number(req.params.id);
+
         const resultado = await mysql.execute(
-            `   UPDATE users
-                   SET name 	= ?,
-                       email 	= ?,
-                       password = ?
-                 where id = ?;`,
-            [req.body.name,
-            req.body.email,
-            req.body.password,
-                idUsuario]
+            `UPDATE users
+             SET first_name = ?,
+                 last_name = ?,
+                 email = ?,
+                 password = ?
+             WHERE id = ?;`,
+            [
+                req.body.first_name,
+                req.body.last_name,
+                req.body.email,
+                req.body.password, // (idealmente criptografado com bcrypt)
+                idUsuario
+            ]
         );
 
         return res.status(200).send({
-            "Mensagem": "Usuario atualizado com sucesso!",
-            "Resultado": resultado
+            mensagem: "Usuário atualizado com sucesso!",
+            resultado: resultado
         });
 
     } catch (error) {
         return res.status(500).send(error);
-
     }
-}
+};
+
 
 exports.cadastrarUsuario = async (req, res) => {
     try {
