@@ -1,4 +1,4 @@
-const jwt = require("jsonwebtoken");
+    const jwt = require("jsonwebtoken");
 
 exports.required = async (req, res, next) => {
     try {

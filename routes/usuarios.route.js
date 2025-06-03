@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const usuariosCotroller = require("../controllers/usuarios.controller");
+const login = require("../middleware/usuários.middleware");
 
 router.post( "/login", usuariosCotroller.login);
-router.put( "/:id", usuariosCotroller.atualizarUsuario);
+router.put( "/:id", login.required, usuariosCotroller.atualizarUsuario);
 router.post( "/", usuariosCotroller.cadastrarUsuario);
 
 
