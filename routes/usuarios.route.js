@@ -4,7 +4,7 @@ const usuariosCotroller = require("../controllers/usuarios.controller");
 const login = require("../middleware/usuários.middleware");
 
 router.post( "/login", usuariosCotroller.login);
-router.put( "/:id", login.required, usuariosCotroller.atualizarUsuario);
+router.put( "/", login.required, usuariosCotroller.atualizarUsuario);
 router.post( "/", usuariosCotroller.cadastrarUsuario);
 
 

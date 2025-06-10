@@ -12,7 +12,7 @@ exports.atualizarUsuario = async (req, res) => {
                 last_name = ?,
                 phone     = ?,
                 birth_date = ?,
-                email = ?,
+                email = ?
             WHERE  id	 =?;`,
             
             [

@@ -178,3 +178,35 @@ VALUES ("Speedi Kid", 2, "Aberto", (SELECT id FROM areas WHERE name = "Infantasi
 -- Doremí - Infantasia
 INSERT INTO rides(name, waiting_time, status, id_areas)
 VALUES ("Doremí", 3, "Aberto", (SELECT id FROM areas WHERE name = "Infantasia"));
+
+use hopi_hari_db;
+
+UPDATE rides SET image = "cinekaminda.jpg" WHERE name = "Cine 180";
+UPDATE rides SET image = "espetáculo.jpg" WHERE name = "Espetáculo de Rua";
+UPDATE rides SET image = "infocentro.jpg" WHERE name = "Infocentro";
+UPDATE rides SET image = "hotelfantasma.jpg" WHERE name = "Ghosti Hotel";
+UPDATE rides SET image = "saloon.jpg" WHERE name = "Saloon Show";
+UPDATE rides SET image = "carrossel.jpg" WHERE name = "Carrossel di Billie";
+UPDATE rides SET image = "horror.jpg" WHERE name = "Hora do Horror Kids";
+UPDATE rides SET image = "heroi.jpg" WHERE name = "Super Herói Show";
+UPDATE rides SET image = "looney.jpg" WHERE name = "The Looney Tunes Show";
+UPDATE rides SET image = "evolution.jpg" WHERE name = "Evolution";
+UPDATE rides SET image = "simulakron.jpg" WHERE name = "Simulákron";
+UPDATE rides SET image = "teatro.jpg" WHERE name = "Theatro di Kaminda";
+UPDATE rides SET image = "kastel.jpg" WHERE name = "Kastel di Lendas";
+UPDATE rides SET image = "montezum.jpg" WHERE name = "Minimontanha";
+UPDATE rides SET image = "trenzinho.jpg" WHERE name = "Trenzinho";
+UPDATE rides SET image = "crazy.jpg" WHERE name = "Crazy Wagon";
+UPDATE rides SET image = "old.jpeg" WHERE name = "Old West";
+UPDATE rides SET image = "vambate.jpg" WHERE name = "Vambatê";
+UPDATE rides SET image = "urso.jpg" WHERE name = "Toka di Urso";
+UPDATE rides SET image = "montezum.jpg" WHERE name = "Montezum";
+UPDATE rides SET image = "ekatomb.png" WHERE name = "Ekatomb";
+UPDATE rides SET image = "katakumb.png" WHERE name = "Katakumb";
+UPDATE rides SET image = "rio.jpg" WHERE name = "Rio Bravo";
+UPDATE rides SET image = "hotel2.jpg" WHERE name = "West River Hotel";
+UPDATE rides SET image = "torre.jpg" WHERE name = "La Tour Eiffel";
+UPDATE rides SET image = "Vurang-2-1.jpg" WHERE name = "Vurang";
+UPDATE rides SET image = "giranda.jpg" WHERE name = "Giranda Mundi";
+UPDATE rides SET image = "trenzinho.jpg" WHERE name = "Speedi Kid";
+UPDATE rides SET image = "looping star.jpg" WHERE name = "Doremí";
