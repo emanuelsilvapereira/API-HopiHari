@@ -19,7 +19,7 @@
   "homepage": "https://github.com/emanuelsilvapereira/API-HopiHari#readme",
   "dependencies": {
     "bcrypt": "^6.0.0",
-    "body-parser": "^2.2.0",
+    "body-parser": "^2.2.2",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
